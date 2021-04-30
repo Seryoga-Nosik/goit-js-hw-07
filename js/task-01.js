@@ -5,6 +5,7 @@
 Например для первой категории получится:
 Категория: Животные
 Количество элементов: 4 */
+
 const itemEl = document.querySelectorAll('.item');
 console.log(`В списке ${itemEl.length} категории.`);
 
