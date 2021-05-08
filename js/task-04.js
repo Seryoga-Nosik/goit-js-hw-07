@@ -19,12 +19,15 @@ const refs = {
   counterValue: document.querySelector('#value'),
 };
 
+let value = 0;
 function onDescrBtnClick() {
-  refs.counterValue.textContent--;
+  value -= 1;
+  refs.counterValue.textContent = value;
 }
 
 function onIncrBtnClick() {
-  refs.counterValue.textContent++;
+  value += 1;
+  refs.counterValue.textContent = value;
 }
 
 refs.descrBtn.addEventListener('click', onDescrBtnClick);
