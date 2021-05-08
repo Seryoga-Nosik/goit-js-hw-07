@@ -33,11 +33,12 @@ const images = [
 const imagesList = document.querySelector('#gallery');
 imagesList.classList.add('gallery__list');
 
-const makeGallery = images.map(({ url, alt }) => {
-  return imagesList.insertAdjacentHTML(
-    'beforeend',
-    `<li>
+const makeGallery = images
+  .map(({ url, alt }) => {
+    return `<li>
     <img class='gallery__item' src='${url}' alt='${alt}'>
-    </li>`,
-  );
-});
+    </li>`;
+  })
+  .join('');
+
+imagesList.insertAdjacentHTML('beforeend', makeGallery);
