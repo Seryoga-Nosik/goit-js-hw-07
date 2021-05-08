@@ -25,4 +25,13 @@ const refs = {
   inputEl: document.querySelector('js-input'),
   renderBtn: document.querySelector('[data-action="render"]'),
   destroyBtn: document.querySelector('[data-action="destroy"]'),
+  body: document.querySelector('conrols'),
 };
+
+// refs.inputEl.addEventListener('input', onInputChange);
+refs.renderBtn.addEventListener('click', onInputBtnClick);
+// refs.destroyBtn.addEventListener('click', onDestroyBtnClick);
+
+function onInputBtnClick() {
+  refs.body.createElement('div');
+}

@@ -33,11 +33,11 @@ const images = [
 const imagesList = document.querySelector('#gallery');
 imagesList.classList.add('gallery__list');
 
-const makeImageMarkup = images.map(({ url, alt }) => {
-  const imageEl = document.createElement('li');
-  imageEl.insertAdjacentHTML('afterbegin', `<img class='gallery__item' src='${url}' alt='${alt}'>`);
-
-  return imageEl;
+const makeGallery = images.map(({ url, alt }) => {
+  return imagesList.insertAdjacentHTML(
+    'beforeend',
+    `<li>
+    <img class='gallery__item' src='${url}' alt='${alt}'>
+    </li>`,
+  );
 });
-
-imagesList.append(...makeImageMarkup);
